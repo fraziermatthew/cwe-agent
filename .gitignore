@@ -1,6 +1,17 @@
-.DS_Store
-.virtualenv/
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.virtualenv/
+venv/
+env/
+ENV/
+.env
+
+# OS
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
