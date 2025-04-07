@@ -1,0 +1,30 @@
+[project]
+name = "cwe-agent"
+version = "0.1.0"
+description = "Research CWE"
+authors = [
+    {name = "fraziermatthew",email = "fraziermatthew@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.13" 
+dependencies = [
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "openai (>=1.70.0,<2.0.0)",
+    "langfuse (>=2.60.2,<3.0.0)",
+    "crewai (>=0.108.0,<0.109.0)",
+    "duckduckgo-search (>=2025.4.4,<2026.0.0)",
+    "langchain-openai (>=0.3.12,<0.4.0)",
+    "pypdf2 (>=3.0.1,<4.0.0)",
+    "pydantic (>=2.11.2,<3.0.0)"
+]
+
+
+[tool.poetry]
+packages = [
+    { include = "cwe_agent" }
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

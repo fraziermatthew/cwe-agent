@@ -1,0 +1,9 @@
+{
+  "cwe_id": "190",
+  "relevance": 9,
+  "appropriateness": 8,
+  "naturalness": 9,
+  "pedagogical_value": 10,
+  "total_score": 36,
+  "evaluator_notes": "The CWE is highly relevant as it directly relates to the manipulation of quantities in a product management system, which is central to the assignment. It is appropriate for the course level as students are expected to understand and mitigate such vulnerabilities. The injection fits naturally into the existing logic without altering the overall structure of the code. This example provides significant pedagogical value by illustrating a common security flaw that students should learn to recognize and prevent in their coding practices."
+}

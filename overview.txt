@@ -1,0 +1,24 @@
+
++-------------------+
+| Student Code File |
++-------------------+
+         ↓
++----------------------------+
+| CWE Injector (LLM Agent)  | ← injects Top 25 CWE variants
++----------------------------+
+         ↓
+  25 versions of code
+         ↓
++-----------------------------+
+| CWE Evaluator (LLM Agent)  | ← scores each version on 3+ dimensions
++-----------------------------+
+         ↓
++-----------------------------+
+| CWE Ranker (LLM Agent)     | ← ranks CWE variants by educational value
++-----------------------------+
+         ↓
+     Top CWE variant
+         ↓
++----------------------------------------+
+| Learning Outcome Generator (LLM Agent) | ← generates MCQ + open-ended Q
++----------------------------------------+

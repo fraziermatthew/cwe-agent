@@ -1,0 +1,6 @@
+{
+  "cwe_id": "125",
+  "summary": "CWE-125 (Out-of-bounds Read) refers to a situation where a program reads data outside the boundaries of allocated memory. This can lead to unpredictable behavior, including application crashes, data corruption, or the exposure of sensitive information. Understanding this vulnerability is crucial for developers, especially when handling data in APIs, as it emphasizes the importance of validating inputs and ensuring that all data accesses are within valid ranges. This knowledge helps in writing secure code and protecting applications from potential attacks that exploit such vulnerabilities.",
+  "multiple_choice": "What is a potential consequence of an out-of-bounds read vulnerability in a web application? A) Increased performance of the application B) Application crashes or unexpected behavior C) Enhanced security of the application D) Improved user experience. Correct Answer: B) Application crashes or unexpected behavior.",
+  "open_ended": "Explain how you would modify the provided code to prevent the out-of-bounds read vulnerability while ensuring that the application still returns a meaningful response when a product is not found."
+}

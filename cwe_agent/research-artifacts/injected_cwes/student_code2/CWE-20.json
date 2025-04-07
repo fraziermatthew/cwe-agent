@@ -1,0 +1,15 @@
+{
+  "cwe_id": "20",
+  "cwe_title": "Improper Input Validation",
+  "cwe_description": "The product receives input or data, but it does not validate or incorrectly validates that the input has the properties that are required to process the data safely and correctly.",
+  "language": "python",
+  "student_file": "student_code2.py",
+  "course_excerpt": "CMSC\n \n426:\n \nSoftware\n \nas\n \na\n \nService\n \nFall\n \n2024\n \nSyllabus\n \n \n \nCatalog\n \nListing:\n \n \nCMSC\n \n426\n \n-\n \nSoftware\n \nas\n \na\n \nService\n \nCourse\n \nLevel:\n \n \n \nUndergraduate\n \nPrerequisites:\n \n \nCMSC\n \n355\n \nwith\n \na\n \ngrade\n \nof\n \nC\n \nor\n \nbetter\n \n \nInstructor:\n \n       \n \nDr.\n \nKosta\n \nDamevski\n \n(\nhttp://damevski.github.io\n)\n \nOffice:\n                \n \nERB\n \n2324\n \nPhone:\n               ",
+  "assignment_excerpt": "[CMSC 455] Assignment #2: REST APIs\nDue: End of Day, September 26th, 2024\nObjective: The objective of this assignment is to create a microservice s application for grocery shopping.\nStudentswilldeveloptwoFlaskmicroservices, ”ProductSe rvice”and”CartService,”withspeciﬁcendpoints.\nThey will also deploy both services on the Render platform. T his assignment will help students gain practical\nexperienc",
+  "output": {
+    "cwe_id": "20",
+    "cwe_title": "Improper Input Validation",
+    "modified_code": "from flask import Flask, jsonify, request\n\n\napp = Flask(__name__)\n\n\n# Sample data\nproducts = [\n    {\"id\": 1, \"name\": \"Apple\", \"price\": 0.5, \"quantity\": 100},\n    {\"id\": 2, \"name\": \"Banana\", \"price\": 0.3, \"quantity\": 150},\n]\n\n\n@app.route('/products', methods=['GET'])\ndef get_products():\n    return jsonify(products)\n\n\n@app.route('/products/<int:product_id>', methods=['GET'])\ndef get_product(product_id):\n    product = next((p for p in products if p[\"id\"] == product_id), None)\n    return jsonify(product) if product else ('', 404)\n\n\n@app.route('/products', methods=['POST'])\ndef add_product():\n    new_product = request.json\n    # Vulnerability introduced: No validation on product data\n    new_product['id'] = len(products) + 1\n    products.append(new_product)\n    return jsonify(new_product), 201\n\n\nif __name__ == '__main__':\n    app.run(debug=True, host='0.0.0.0', port=5000)\n",
+    "injection_notes": "The vulnerability was introduced in the add_product function where the new product data is accepted without any validation, allowing for potentially unsafe data to be added to the products list."
+  }
+}
