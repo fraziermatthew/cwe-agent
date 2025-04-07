@@ -93,7 +93,7 @@ Ensure the following exist in `/data`:
 - `student_code2.py`
 - `course-context.pdf`
 - `a2-rest.pdf`
-- `cwe.csv` (from MITRE Top 25 2024 page)
+- `cwe.csv` (from MITRE Top 25 2024 page) - Downloadable - https://cwe.mitre.org/data/csv/1430.csv.zip
 
 ### Output Artifacts
 - Injected variants: `research-artifacts/injected_cwes/{student_id}/`
