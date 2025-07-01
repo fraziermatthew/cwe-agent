@@ -141,4 +141,4 @@ To resolve ties in CWE scores:
 ---
 
 ## 🤝 Credits
-Built by Matt in collaboration with academic researchers in secure software engineering. For use in educational research settings.
+Built in collaboration with academic researchers in secure software engineering. For use in educational research settings.
